@@ -25,18 +25,21 @@ namespace MathOperatorsTemplate
         private void runButton_Click(object sender, EventArgs e)
         {
             // 1. Declare a string variable, put your name in it, display it
-
-
+            string name = "Maeve";
+            outputLabel.Text = $"Welcome... {name}";
+            
             // 2. Declare an integer variable, put your age in it, display it
-
-
+            int age = 16;
+            outputLabel.Text += $"\nAge: {age}";
+            
             // 3. Declare a double variable, put a decimal number, display it
-
-
+            double passcode = 1.234;
+            outputLabel.Text += $"\nPasscode: {passcode}";
+            
             /// 4. Combine a text with a variable to display: 
             ///   "Hello" followed by your name (e.g. Hello Mr. T)
-
-
+            outputLabel.Text += $"\n\nHello {name}";
+            
             /// 5. Simple arithmetic is done by using the +, -, * and /, 
             /// (plus, minus, times and divide). Results of mathematical
             /// expressions should be stored in a variable. 
@@ -49,13 +52,12 @@ namespace MathOperatorsTemplate
             /// 
             /// 6 - 4 = 2
 
-            //int x = 6;
-            //int y = 4;
-            //int answer = x + y;
+            int x = 6;
+            int y = 4;
+            int answer = x - y;
 
-            //outputLabel.Text += $"\n\nx + y = {answer}";
-
-
+            outputLabel.Text += $"\n\n{x} - {y} = {answer}";
+            
             /// 6. Create a program that calculates how much money an 
             /// employee has made based on their pay rate and the 
             /// number of hours worked.
@@ -71,8 +73,17 @@ namespace MathOperatorsTemplate
             /// Rate of Pay: 15.25
             /// Hours Worked: 8
             /// Total Pay: 122
-            
 
+            // Variables
+            double payRate = 15.25;
+            double hoursWorked = 8;
+            double totalPay;
+
+            // Calculation
+            totalPay = payRate * hoursWorked;
+
+            // Display
+            outputLabel.Text += $"\n\nRate of Pay: {payRate} \nHours Worked: {hoursWorked} \nTotal Pay = {totalPay}";
 
             /// 7. Create a program which calculates the tax amount for a
             /// meal at a restaurant.
@@ -86,15 +97,28 @@ namespace MathOperatorsTemplate
             ///   
             /// Bill Amount: 22.5
             /// 13% Tax: 2.925             
-            
 
+            // Variables
+            double billAmount = 22.50;
+            double taxRate = 0.13;
+            double taxAmount;
+
+            // Calculation of taxAmount
+            taxAmount = billAmount * taxRate;
+
+            // Display Reciept
+            outputLabel.Text += $"\n\nBill Amount = {billAmount} \n13% Tax = {taxAmount}";           
 
             // 8. Increment your age variable by 1 using ++ and display it
+            age++;
 
-
+            outputLabel.Text += $"\n\nNext Age = {age}";
+            
             // 9. Decrement your age variable by 1 using -- and display it          
-
-
+            age--;
+            outputLabel.Text += $"\nCurrent Age = {age}";
+            
+            outputLabel.Text += "\n\nGoodbye";
         }
     }
 }
